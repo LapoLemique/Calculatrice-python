@@ -1,0 +1,26 @@
+# fonction calcul
+def calcul(x1, op, x2):
+    resultat = 0
+    match op:
+        case "+":
+            resultat = x1 + x2 
+        case "-":
+            resultat = x1 - x2
+        case "*":
+            resultat = x1 * x2
+        case "/":
+            resultat = x1/x2
+    return resultat
+
+# recupere ce qui rentre dans le terminale
+
+while(True):
+    dmd = input("Operation : ") # 1+1 [1][+][1]
+
+    x1 = int(dmd[0]) # x1
+    op = dmd[1] # op
+    x2 = int(dmd[2]) # x2
+
+    resultat = calcul(x1,op,x2) # x1 x2 op
+
+    print("Resultat : ", resultat)
