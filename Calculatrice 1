@@ -1,0 +1,31 @@
+# Fonction calcul
+def calcul(x1, x2, operation) :
+    if operation == "addition" :
+        resultat = x1 + x2
+    elif operation == "soustraction" :
+        resultat = x1 - x2
+    elif operation == "multiplication" :
+        resultat = x1 * x2
+    elif operation == "division" : 
+        resultat = x1/x2
+    else :
+        print ("erreur")
+        return "erreur"
+    return resultat
+
+casser = True
+string_operation = ("addition", "soustraction", "soustraction", "multiplication")
+# Boucle
+while (casser):
+    operation = input ("addition, soustraction, soustraction ou multiplication ? : ")
+
+    if operation not in string_operation:
+        print("Erreur")
+        break
+
+    x1 = int(input ("Valeur 1 : "))
+    resultat = 0
+    x2 = int(input ("Valeur 2 : "))
+    resultat = calcul(x1, x2, operation)
+    # renvoie le resultat
+    print("Le resultat est : ", resultat)
